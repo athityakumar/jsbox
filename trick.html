@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="trick1.css">
+<link rel="icon" href="http://4.bp.blogspot.com/-CVAghs2H5Qg/UXyNr-8skVI/AAAAAAAAAIE/MOJrz9DjGg8/s1600/20120915094602!Play-iconblackos.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+<head>
+<title> Playing with boxes </title>
+</head>
+<body>
+<div id="box1" style="min-height: 160px; max-height: 500px; position: absolute; top: 10px; left: 18%; height: 500px; width: 20%; border-style: solid; border-width: thin;"> 
+<div id="label"> BOX - 1 </div>
+<script>
+function r1() 
+{
+var x = document.getElementById("box1");
+x.style.backgroundColor = "#6E0707";
+}
+</script>
+<button type="button" onclick="r1()" class="red" title="Apply red color!"> </button>
+
+<script>
+function g1() 
+{
+var x = document.getElementById("box1");
+x.style.backgroundColor = "#057611";
+}
+</script>
+<button type="button" onclick="g1()" class="green" title="Apply green color!">  </button>
+
+<script>
+function b1() 
+{
+var x = document.getElementById("box1");
+x.style.backgroundColor = "#0920EE";
+}
+</script>
+<button type="button" onclick="b1()" class="blue" title="Apply blue color!">  </button>
+<script>
+function left()
+{
+var l = document.getElementById("left");
+if(l.style.opacity != 0.1) 
+{
+var x1 = document.getElementById("box1");
+var x2 = document.getElementById("box2");
+var x3 = document.getElementById("box3");var x4 = document.getElementById("box4");
+var r = document.getElementById("right");
+x1.style.opacity = '1';
+x1.style.left = '18%'; 
+x2.style.left = '39%';
+x3.style.left = '39%';
+x4.style.left = '39%';
+l.style.opacity = '0.1' ;
+r.style.opacity = '1' ;
+l.style.cursor = 'auto' ;
+r.style.cursor = 'pointer' ;
+}
+else alert("\n Box-1 is already on left side!");
+}
+
+</script>
+<button type="button" onclick="left()" id="left" title="Move this box from right side to left side!"> </button>
+
+<script>
+function right()
+{
+var r = document.getElementById("right");
+if(r.style.opacity != 0.1) 
+{
+var l = document.getElementById("left");
+var x1 = document.getElementById("box1");
+var x2 = document.getElementById("box2");
+var x3 = document.getElementById("box3");var x4 = document.getElementById("box4");
+x1.style.left = '59%';
+x2.style.left = '17%';
+x3.style.left = '17%';
+x4.style.left = '17%';
+r.style.opacity ='0.1';
+r.style.cursor = 'auto';
+l.style.opacity = '1';
+l.style.cursor = 'pointer';
+}
+else alert("\n Box-1 is already on right side!");
+}
+</script>
+<button type="button" onclick="right()" id="right" title="Move this box from left side to right side!"> </button>
+<script>
+function up1() 
+{
+var y = document.getElementById("down1");
+var x = document.getElementById("up1");
+var d = document.getElementById("box1");
+
+y.style.opacity = '1';
+y.style.cursor = 'pointer';
+if (d.style.height == '160px' )  
+{
+alert(" \n Height of Box-1 can't be reduced further!");
+x.style.opacity = '0.1';
+x.style.cursor = 'auto';
+}
+else
+{
+d.style.height = parseInt(d.style.height) - (10*1) + 'px';
+if (d.style.height == '160px' )  
+{
+x.style.opacity = '0.1';
+x.style.cursor = 'auto';
+}
+else
+{
+x.style.opacity = '1';
+x.style.cursor = 'pointer';
+}
+}
+}
+</script>
+<button type="button" onclick="up1()" id="up1" title="Compress the box and go towards the top!"> </button>
+<script>
+function down1() 
+{
+var x = document.getElementById("up1");
+var y = document.getElementById("down1");
+var d = document.getElementById("box1");
+x.style.opacity = '1';
+x.style.cursor = 'pointer';
+  
+if(d.style.height == '500px')  
+{
+alert(" \n Height of Box-1 can't be increased further!");
+y.style.opacity = '0.1';
+y.style.cursor = 'auto';
+}
+else
+{
+
+d.style.height = parseInt(d.style.height) + (10*1) + 'px';
+if(d.style.height == '500px')  
+{
+y.style.opacity = '0.1';
+y.style.cursor = 'auto';
+}
+else
+{
+y.style.opacity = '1';
+y.style.cursor = 'pointer';
+}
+}
+}
+</script>
+<button type="button" onclick="down1()" id="down1" title="Stretch the box and go towards the bottom!"> </button>
+
+</div>
+</div>
+
+
+
+<div id="box2"> 
+<div id="label"> BOX - 2 </div>
+<script>
+function r2() 
+{
+var x = document.getElementById("box2");
+x.style.backgroundColor = "#6E0707";
+}
+</script>
+<button type="button" onclick="r2()" class="red" title="Apply red color!">  </button>
+
+<script>
+function g2() 
+{
+var x = document.getElementById("box2");
+x.style.backgroundColor = "#057611";
+}
+</script>
+<button type="button" onclick="g2()" class="green" title="Apply green color!">  </button>
+
+<script>
+function b2() 
+{
+var x = document.getElementById("box2");
+x.style.backgroundColor = "#0920EE";
+}
+</script>
+<button type="button" onclick="b2()" class="blue"  title="Apply blue color!">  </button>
+<script>
+function up2()
+{
+var a = document.getElementById("box2");
+var b = document.getElementById("box3");
+var c = document.getElementById("box4");
+var u2 = document.getElementById("up2");
+var d2 = document.getElementById("down2");
+var u3 = document.getElementById("up3");
+var d3 = document.getElementById("down3");
+var u4 = document.getElementById("up4");
+var d4 = document.getElementById("down4");
+if(a.offsetTop == "10") 
+  {
+  alert("No box to swap with!");
+  }
+else if(a.offsetTop == "180")
+  {
+  if(b.offsetTop == "10") 
+     {
+     u3.style.cursor = 'pointer';
+     u3.style.opacity = '1';
+     b.style.top = "180px";
+     }
+  else if(c.offsetTop == "10")
+     {
+     u4.style.cursor = 'pointer';
+     u4.style.opacity = '1'; 
+     c.style.top = "180px";
+     }
+   u2.style.cursor = 'default';
+   u2.style.opacity = '0.1';  
+   a.style.top = "10px";
+   }
+else
+   {
+   if(b.offsetTop == "180")
+      {
+      d3.style.cursor = 'default';
+      d3.style.opacity = '0.1';
+      b.style.top = "350px";
+      }
+   else if(c.offsetTop == "180")
+      {
+      d4.style.cursor = 'default';
+      d4.style.opacity = '0.1';
+      c.style.top = "350px";
+      }
+   d2.style.cursor = 'pointer';
+   d2.style.opacity = '1';
+   a.style.top = "180px";
+   }
+
+}
+</script>
+<button type="button" onclick="up2()" id="up2" title="Swap with the box above!">  </button>
+<script>
+function down2() 
+{
+var a = document.getElementById("box2");
+var b = document.getElementById("box3");
+var c = document.getElementById("box4");
+var u2 = document.getElementById("up2");
+var d2 = document.getElementById("down2");
+var u3 = document.getElementById("up3");
+var d3 = document.getElementById("down3");
+var u4 = document.getElementById("up4");
+var d4 = document.getElementById("down4");
+if(a.offsetTop == "350") 
+  {
+  alert("No box to swap with!");
+  }
+else if(a.offsetTop == "180")
+  {
+  if(b.offsetTop == "350") 
+     {
+     d3.style.cursor = 'pointer';
+     d3.style.opacity = '1';
+     b.style.top = "180px";
+     }
+  else if(c.offsetTop == "350") 
+     {
+     d4.style.cursor = 'pointer';
+     d4.style.opacity = '1';
+     c.style.top = "180px";
+     }
+   d2.style.cursor = 'default';
+   d2.style.opacity = '0.1';
+   a.style.top = "350px";
+   }
+else
+   {
+   if(b.offsetTop == "180")
+      {
+      u3.style.cursor = 'default';
+      u3.style.opacity = '0.1';
+      b.style.top = "10px";
+      }
+   else if(c.offsetTop == "180") 
+      {
+      u4.style.cursor = 'default';
+      u4.style.opacity = '0.1';
+      c.style.top = "10px";
+      }
+   u2.style.cursor = 'pointer';
+   u2.style.opacity = '1';
+   a.style.top = "180px";
+   }
+}
+</script>
+<button type="button" onclick="down2()" id="down2" title="Swap me with the box below!"> </button>
+</div>
+
+<div id="box3"> 
+<div id="label"> BOX - 3 </div>
+<script>
+function r3() 
+{
+var x = document.getElementById("box3");
+x.style.backgroundColor = "#6E0707";
+}
+</script>
+<button type="button" onclick="r3()" class="red" title="Apply red color!">  </button>
+
+<script>
+function g3() 
+{
+var x = document.getElementById("box3");
+x.style.backgroundColor = "#057611";
+}
+</script>
+<button type="button" onclick="g3()" class="green" title="Apply green color!">  </button>
+
+<script>
+function b3() 
+{
+var x = document.getElementById("box3");
+x.style.backgroundColor = "#0920EE";
+}
+</script>
+<button type="button" onclick="b3()" class="blue" title="Apply blue color!">  </button>
+<script>
+function up3()
+{
+var a = document.getElementById("box2");
+var b = document.getElementById("box3");
+var c = document.getElementById("box4");
+var u2 = document.getElementById("up2");
+var d2 = document.getElementById("down2");
+var u3 = document.getElementById("up3");
+var d3 = document.getElementById("down3");
+var u4 = document.getElementById("up4");
+var d4 = document.getElementById("down4");
+if(b.offsetTop == "10") 
+  {
+  alert("No box to swap with!");
+  }
+else if(b.offsetTop == "180")
+  {
+  if(a.offsetTop == "10") 
+     {
+     u2.style.cursor = 'pointer';
+     u2.style.opacity = '1';
+     a.style.top = "180px";
+     }
+  else
+     {
+     u4.style.cursor = 'pointer';
+     u4.style.opacity = '1'; 
+     c.style.top = "180px";
+     }
+   u3.style.cursor = 'default';
+   u3.style.opacity = '0.1';  
+   b.style.top = "10px";
+   }
+else
+   {
+   if(a.offsetTop == "180")
+      {
+      d2.style.cursor = 'default';
+      d2.style.opacity = '0.1';
+      a.style.top = "350px";
+      }
+   else
+      {
+      d4.style.cursor = 'default';
+      d4.style.opacity = '0.1';
+      c.style.top = "350px";
+      }
+   d3.style.cursor = 'pointer';
+   d3.style.opacity = '1';
+   b.style.top = "180px";
+   }
+
+}
+</script>
+<button type="button" onclick="up3()" id="up3" title="Swap me with the box above!"> </button>
+<script>
+
+function down3() 
+{
+var a = document.getElementById("box2");
+var b = document.getElementById("box3");
+var c = document.getElementById("box4");
+var u2 = document.getElementById("up2");
+var d2 = document.getElementById("down2");
+var u3 = document.getElementById("up3");
+var d3 = document.getElementById("down3");
+var u4 = document.getElementById("up4");
+var d4 = document.getElementById("down4");
+if(b.offsetTop == "350") 
+  {
+  alert("No box to swap with!");
+  }
+else if(b.offsetTop == "180")
+  {
+  if(a.offsetTop == "350") 
+     {
+     d2.style.cursor = 'pointer';
+     d2.style.opacity = '1';
+     a.style.top = "180px";
+     }
+  else
+     {
+     d4.style.cursor = 'pointer';
+     d4.style.opacity = '1';
+     c.style.top = "180px";
+     }
+   d3.style.cursor = 'default';
+   d3.style.opacity = '0.1';
+   b.style.top = "350px";
+   }
+else
+   {
+   if(a.offsetTop == "180")
+      {
+      u2.style.cursor = 'default';
+      u2.style.opacity = '0.1';
+      a.style.top = "10px";
+      }
+   else
+      {
+      u4.style.cursor = 'default';
+      u4.style.opacity = '0.1';
+      c.style.top = "10px";
+      }
+   u3.style.cursor = 'pointer';
+   u3.style.opacity = '1';
+   b.style.top = "180px";
+   }
+}
+
+</script>
+<button type="button" onclick="down3()" id="down3" title="Swap me with the box below!"> </button>
+</div>
+<div id="box4"> 
+<div id="label"> BOX - 4 </div>
+<script>
+function r4() 
+{
+var x = document.getElementById("box4");
+x.style.backgroundColor = "#6E0707";
+}
+</script>
+<button type="button" onclick="r4()" class="red" title="Apply red color!">  </button>
+
+<script>
+function g4() 
+{
+var x = document.getElementById("box4");
+x.style.backgroundColor = "#057611";
+}
+</script>
+<button type="button" onclick="g4()" class="green" title="Apply green color!">  </button>
+
+<script>
+function b4() 
+{
+var x = document.getElementById("box4");
+x.style.backgroundColor = "#0920EE";
+}
+</script>
+<button type="button" onclick="b4()" class="blue" title="Apply blue color!">  </button>
+<script>
+function up4()
+{
+var a = document.getElementById("box2");
+var b = document.getElementById("box3");
+var c = document.getElementById("box4");
+var u2 = document.getElementById("up2");
+var d2 = document.getElementById("down2");
+var u3 = document.getElementById("up3");
+var d3 = document.getElementById("down3");
+var u4 = document.getElementById("up4");
+var d4 = document.getElementById("down4");
+if(c.offsetTop == "10") 
+  {
+  alert("No box to swap with!");
+  }
+else if(c.offsetTop == "180")
+  {
+  if(b.offsetTop == "10") 
+     {
+     u3.style.cursor = 'pointer';
+     u3.style.opacity = '1';
+     b.style.top = "180px";
+     }
+  else
+     {
+     u2.style.cursor = 'pointer';
+     u2.style.opacity = '1'; 
+     a.style.top = "180px";
+     }
+   u4.style.cursor = 'default';
+   u4.style.opacity = '0.1';  
+   c.style.top = "10px";
+   }
+else
+   {
+   if(b.offsetTop == "180")
+      {
+      d3.style.cursor = 'default';
+      d3.style.opacity = '0.1';
+      b.style.top = "350px";
+      }
+   else
+      {
+      d2.style.cursor = 'default';
+      d2.style.opacity = '0.1';
+      a.style.top = "350px";
+      }
+   d4.style.cursor = 'pointer';
+   d4.style.opacity = '1';
+   c.style.top = "180px";
+   }
+
+}
+</script>
+
+<button type="button" onclick="up4()" id="up4" title="Swap me with the box above!"> </button>
+<script>
+function down4() 
+{
+var a = document.getElementById("box2");
+var b = document.getElementById("box3");
+var c = document.getElementById("box4");
+var u2 = document.getElementById("up2");
+var d2 = document.getElementById("down2");
+var u3 = document.getElementById("up3");
+var d3 = document.getElementById("down3");
+var u4 = document.getElementById("up4");
+var d4 = document.getElementById("down4");
+if(c.offsetTop == "350") 
+  {
+  alert("No box to swap with!");
+  }
+else if(c.offsetTop == "180")
+  {
+  if(b.offsetTop == "350") 
+     {
+     d3.style.cursor = 'pointer';
+     d3.style.opacity = '1';
+     b.style.top = "180px";
+     }
+  else
+     {
+     d2.style.cursor = 'pointer';
+     d2.style.opacity = '1';
+     a.style.top = "180px";
+     }
+   d4.style.cursor = 'default';
+   d4.style.opacity = '0.1';
+   c.style.top = "350px";
+   }
+else
+   {
+   if(b.offsetTop == "180")
+      {
+      u3.style.cursor =  'default';
+      u3.style.opacity = '0.1';
+      b.style.top = "10px";
+      }
+   else
+      {
+      u2.style.cursor = 'default';
+      u2.style.opacity = '0.1';
+      a.style.top = "10px";
+      }
+   u4.style.cursor = 'pointer';
+   u4.style.opacity = '1';
+   c.style.top = "180px";
+   }
+}
+</script>
+<button type="button" onclick="down4()" id="down4" title="Swap me with the box below!"> </button>
+</div>
+</body>
+</html>
